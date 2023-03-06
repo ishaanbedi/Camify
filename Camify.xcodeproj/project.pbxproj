@@ -11,6 +11,8 @@
 		2E49A72A29B581D9007DEFF1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E49A72929B581D9007DEFF1 /* ContentView.swift */; };
 		2E49A72C29B581D9007DEFF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E49A72B29B581D9007DEFF1 /* Assets.xcassets */; };
 		2E49A72F29B581D9007DEFF1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E49A72E29B581D9007DEFF1 /* Preview Assets.xcassets */; };
+		2E49A74529B5B1C5007DEFF1 /* CameraView in Frameworks */ = {isa = PBXBuildFile; productRef = 2E49A74429B5B1C5007DEFF1 /* CameraView */; };
+		2E49A74D29B5B5F8007DEFF1 /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E49A74C29B5B5F8007DEFF1 /* TransactionsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		2E49A72929B581D9007DEFF1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2E49A72B29B581D9007DEFF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E49A72E29B581D9007DEFF1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2E49A73A29B58636007DEFF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2E49A74C29B5B5F8007DEFF1 /* TransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E49A74529B5B1C5007DEFF1 /* CameraView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +56,10 @@
 		2E49A72629B581D9007DEFF1 /* Camify */ = {
 			isa = PBXGroup;
 			children = (
+				2E49A73A29B58636007DEFF1 /* Info.plist */,
 				2E49A72729B581D9007DEFF1 /* CamifyApp.swift */,
 				2E49A72929B581D9007DEFF1 /* ContentView.swift */,
+				2E49A74C29B5B5F8007DEFF1 /* TransactionsView.swift */,
 				2E49A72B29B581D9007DEFF1 /* Assets.xcassets */,
 				2E49A72D29B581D9007DEFF1 /* Preview Content */,
 			);
@@ -83,6 +90,9 @@
 			dependencies = (
 			);
 			name = Camify;
+			packageProductDependencies = (
+				2E49A74429B5B1C5007DEFF1 /* CameraView */,
+			);
 			productName = Camify;
 			productReference = 2E49A72429B581D9007DEFF1 /* Camify.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +121,9 @@
 				Base,
 			);
 			mainGroup = 2E49A71B29B581D9007DEFF1;
+			packageReferences = (
+				2E49A74329B5B1C5007DEFF1 /* XCRemoteSwiftPackageReference "CameraView" */,
+			);
 			productRefGroup = 2E49A72529B581D9007DEFF1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +152,7 @@
 			files = (
 				2E49A72A29B581D9007DEFF1 /* ContentView.swift in Sources */,
 				2E49A72829B581D9007DEFF1 /* CamifyApp.swift in Sources */,
+				2E49A74D29B5B5F8007DEFF1 /* TransactionsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +284,9 @@
 				DEVELOPMENT_TEAM = F7JY38PGBF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Camify/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera for live view";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Mic for view detect";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +316,9 @@
 				DEVELOPMENT_TEAM = F7JY38PGBF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Camify/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera for live view";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Mic for view detect";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,6 +359,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2E49A74329B5B1C5007DEFF1 /* XCRemoteSwiftPackageReference "CameraView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/brettfazio/CameraView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2E49A74429B5B1C5007DEFF1 /* CameraView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E49A74329B5B1C5007DEFF1 /* XCRemoteSwiftPackageReference "CameraView" */;
+			productName = CameraView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2E49A71C29B581D9007DEFF1 /* Project object */;
 }
